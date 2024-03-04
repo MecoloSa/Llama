@@ -1,3 +1,4 @@
+# one version searched form Internet
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
  
@@ -11,3 +12,8 @@ driver = webdriver.Chrome(service=service, options=options)
  
 driver.get("http://www.baidu.com")
 print("程序运行成功")
+
+# Another version
+options = webdriver.ChromeOptions()
+options.add_experimental_option('excludeSwitches', ['enable-logging'])
+driver = webdriver.Chrome(executable_path='<path-to-chrome>', options=options)
